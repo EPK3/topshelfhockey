@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.push {
+    margin-left: auto;
+    display: inline-flex;
+}
+
+.logo {
+    height: 60px;
+    margin: auto;
+    justify-content: center;
+}
+
+.login {
+    border: 1px solid black;
+    margin: 0;
+    padding: 20px 40px;
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    margin: 20px 40px;
+}
