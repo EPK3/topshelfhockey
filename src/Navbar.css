@@ -9,6 +9,7 @@
     height: auto;
     align-items: center;
     text-align: center;
+    border-bottom: 1px solid #000000;
 }
 
 .push {
@@ -23,15 +24,22 @@
 }
 
 .login {
-    margin: 0;
-    padding: 20px 40px;
-    background-color: #000000;
-    color: #ffffff;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #f2c301;
+    border-radius: 25px;
+    color: #000000;
+}
+
+.cart {
+    margin: 20px;
+    margin-right: 40px;
+    padding: 10px;
+    color: #000000;
 }
 
 .login:hover {
-    background-color: #ffffff;
-    color: #000000;
+    opacity: 0.8;
     cursor: pointer;
 }
 

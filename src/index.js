@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import Banner from './Banner';
 import Navbar from './Navbar';
+import Promo from './Promo';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
     <Banner />
+    <Promo />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
