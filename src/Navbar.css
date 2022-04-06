@@ -17,19 +17,29 @@
 }
 
 .logo {
-    height: 60px;
-    margin: auto;
+    height: 55px;
+    margin: 0px 20px;
     justify-content: center;
 }
 
 .login {
-    border: 1px solid black;
     margin: 0;
     padding: 20px 40px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.login:hover {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
 }
 
 h2 {
     margin: 20px 40px;
+    font-size: 18px;
+}
+
+.icon {
+    margin-right: 10px;
 }
