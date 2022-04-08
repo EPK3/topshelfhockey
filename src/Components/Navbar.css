@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+.push {
+    margin-left: auto;
+    display: inline-flex;
+}
+
+.searchBar {
+    justify-content: center;
+    flex: 2;
+    display: inline-flex;
+}
+
+.searchBox {
+    border: 1px solid #000000;
+    border-radius: 10px 0px 0px 10px;
+    height: 40px;
+    width: 400px;
+    background-color: rgb(241, 240, 240);
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.searchIcon {
+    padding: 10px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 0px 10px 10px 0px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.logo {
+    height: 55px;
+    margin: 0px 20px;
+    justify-content: center;
+}
+
+.login {
+    margin: 20px 10px;
+    padding: 10px 20px;
+    background-color: #f2c301;
+    border-radius: 25px;
+    color: #000000;
+}
+
+.cart {
+    margin: 20px 10px;
+    margin-right: 40px;
+    padding: 10px;
+    color: #000000;
+}
+
+.fa-layers-counter {
+    font-size: 50px;
+    margin: 20px 35px;
+}
+
+.login:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.cart:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.searchIcon:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 20px 40px;
+    font-size: 18px;
+}
