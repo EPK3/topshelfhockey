@@ -1,0 +1,76 @@
+.subContainer {
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.subHeader h2 {
+    color: #a0a0a2;
+    font-size: 20px;
+    margin: 0px 20px;
+    text-transform: uppercase;
+}
+
+.subInput {
+    display: inline-flex;
+}
+
+.subBox {
+    background-color: #2e2e2e;
+    color: #a0a0a2;
+    border: none;
+    border-radius: 10px;
+    height: 60px;
+    width: 450px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.subInput h3 {
+    background-color: #000000;
+    color: #a0a0a2;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-left: 20px;
+    padding: 0px 50px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+.subInput h3:hover {
+    background-color: #f2c301;
+    color: #000000;
+    cursor: pointer;
+}
+
+.socialContainer {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialContainer h2 {
+    color: #a0a0a2;
+    font-size: 20px;
+    margin: 0px 20px;
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+
+.socialIcon {
+    color: #a0a0a2;
+    font-size: 30px;
+    margin: 10px;
+    transition: 0.2s ease-in;
+}
+
+.socialIcon:hover {
+    color: #f2c301;
+    cursor: pointer;
+}

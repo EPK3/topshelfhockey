@@ -4,13 +4,15 @@
     justify-content: center;
     min-width: 400px;
     max-width: 400px;
+    min-height: 400px;
+    max-height: 400px;
     flex: 1;
     background-color: #fafafa;
     display: flex;
 }
 
 .productImage img {
-    width: 100%;
+    width: 99%;
     position: relative;
 }
 
@@ -24,6 +26,7 @@
     min-height: 400px;
     background-color: #f0f0f0;
     opacity: 0;
+    transition: 0.5s ease-in;
 }
 
 .iconContainer {
@@ -33,11 +36,12 @@
 .productIcon {
     font-size: 20px;
     color: #ffffff;
-    background-color: #5178BB;
+    background-color: #f2c301;
     padding: 20px;
     border-radius: 50%;
     justify-content: center;
     align-content: center;
+    transition: 0.2s ease-in;
 }
 
 .infoContainer:hover {
@@ -46,4 +50,5 @@
 
 .productIcon:hover {
     cursor: pointer;
+    transform: scale(1.2);
 }

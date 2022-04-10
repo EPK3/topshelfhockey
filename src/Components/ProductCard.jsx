@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faSearch,  faHeart} from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faSearch,  faHeart} from '@fortawesome/free-solid-svg-icons';
 
 
 const ProductCard = ({item}) => {
@@ -12,7 +12,7 @@ const ProductCard = ({item}) => {
         </div>
         <div className='infoContainer'>
             <div className='iconContainer'>
-                <FontAwesomeIcon icon={faShoppingCart} className="productIcon" />
+                <FontAwesomeIcon icon={faCartPlus} className="productIcon" />
             </div>
             <div className='iconContainer'>
                 <FontAwesomeIcon icon={faSearch} className="productIcon" />
