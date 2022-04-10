@@ -33,6 +33,10 @@
     padding-left: 20px;
 }
 
+.searchBox:focus {
+    outline: none;
+}
+
 .searchIcon {
     padding: 10px;
     background-color: #000000;
@@ -85,9 +89,7 @@
 }
 
 .searchIcon:hover {
-    background-color: #f2c301;
-    border-color: #f2c301;
-    color: #000000;
+    color: #f2c301;
     cursor: pointer;
 }
 

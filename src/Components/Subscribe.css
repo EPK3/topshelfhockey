@@ -28,6 +28,10 @@
     padding-left: 20px;
 }
 
+.subBox:focus {
+    outline: none;
+}
+
 .subInput h3 {
     background-color: #000000;
     color: #a0a0a2;
