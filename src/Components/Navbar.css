@@ -28,7 +28,7 @@
     border-radius: 10px 0px 0px 10px;
     height: 40px;
     width: 400px;
-    background-color: rgb(235, 235, 235);
+    background-color: #f1f1f1;
     font-size: 16px;
     padding-left: 20px;
 }
@@ -89,7 +89,7 @@
 }
 
 .searchIcon:hover {
-    color: #f2c301;
+    color: #fed901;
     cursor: pointer;
 }
 

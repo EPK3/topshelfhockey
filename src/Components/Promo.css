@@ -19,19 +19,19 @@
 }
 
 .hockeySticks {
-    background: url(../img/hockeysticks.jpg) no-repeat center center;
+    background: url(../img/hockeysticks.webp) no-repeat center center;
     background-size: cover;
     flex: 1;
 }
 
 .hockeySkates {
-    background: url(../img/hockeyskates.jpg) no-repeat center center;
+    background: url(../img/hockeyskates.webp) no-repeat center center;
     background-size: cover;
     flex: 1;
 }
 
 .hockeyGear {
-    background: url(../img/hockeygear.jpg) no-repeat center center;
+    background: url(../img/hockeygear.webp) no-repeat center center;
     background-size: cover;
     flex: 1;
 }

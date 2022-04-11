@@ -1,0 +1,50 @@
+
+.bannerContainer {
+    background: url(../img/product-banner.webp) no-repeat center bottom;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.blockContainer {
+    width: 100%;
+    display: block;
+}
+
+.title {
+    margin: 50px;
+}
+
+.title h1 {
+    font-size: 50px;
+    margin-left: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #333333;
+}
+
+.filterContainer {
+    width: 100%;
+    display: flex;
+}
+
+.filter {
+    margin: 20px 50px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter p {
+    font-size: 20px;
+}
+
+.push {
+    margin-right: auto;
+}
+
+.dropdown {
+    margin-left: 20px;
+    background-color: #ffffff;
+}
