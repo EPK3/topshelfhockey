@@ -19,7 +19,7 @@ const Navbar = () => {
             <div className='push'>
                 <h2 className="login"><FontAwesomeIcon icon={faUser} className='icon' /> Sign In</h2>
                 <h2 className="cart">
-                    <span className="fa-layers-bottom-right">
+                    <span className="fa-layers">
                         <FontAwesomeIcon icon={faShoppingCart}  className='icon' />
                         <span className="fa-layers-counter">0</span>
                     </span>

@@ -5,10 +5,12 @@ import Promo from '../Components/Promo'
 import Products from '../Components/Products'
 import Subscribe from '../Components/Subscribe'
 import Footer from '../Components/Footer'
+import ShippingBanner from '../Components/ShippingBanner'
 
 const Home = () => {
   return (
     <div>
+      <ShippingBanner/>
         <Navbar />
         <Banner />
         <Promo />

@@ -1,0 +1,9 @@
+.shippingBanner {
+    height: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #4D36B2;
+    color: #ffffff;
+}
