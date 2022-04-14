@@ -51,7 +51,9 @@
 
 .cartProduct {
     display: inline-flex;
-    margin: 50px 100px;
+    margin-left: 200px;
+    padding: 50px 0px;
+    border-bottom: 1px solid #eee;
 }
 
 .itemImg img {
@@ -65,14 +67,113 @@
 }
 .itemSummary h5 {
     font-size: 18px;
+    margin: 0;
+}
+
+.itemSummary p {
+    margin-left: 10px;
 }
 
 .itemSummary {
+    width: 400px;
     margin-bottom: 20px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .removeItem {
     color: red;
     cursor: pointer;
     margin-left: 50px;
+}
+
+.cartSummary {
+    margin: 50px;
+    margin-right: 100px;
+    width: 400px;
+    height: 300px;
+    background-color: #eeeeee;
+    padding: 20px;
+}
+
+.cartSummary h4 {
+    text-align: center;
+    font-size: 25px;
+    margin: 30px;
+    padding-top: 10px;
+    cursor: pointer;
+    border-top: 1px solid #ffffff;
+}
+
+.summaryTitle {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.summaryItem {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.summaryTextTotal {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.summaryPriceTotal {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 810px) {
+    .contCheck {
+        margin: 20px 10px;
+    }
+
+    .contCheck h3 {
+        font-size: 14px;
+    }
+
+    .cartProduct {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 350px;
+        flex-wrap: wrap;
+    }
+
+    .itemPriceCont {
+        width: 100px;
+    }
+
+    .itemImg img {
+        width: 250px;
+    }
+
+    .itemSummaryWrapper {
+        margin: 20px auto;
+    }
+
+    .itemSummary {
+        margin: auto;
+        width: 350px;
+        justify-content: center;
+    }
+
+    .cartWrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cartSummary {
+        margin: auto;
+        min-width: 300px;
+        min-height: 300px;
+    }
 }

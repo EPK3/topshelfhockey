@@ -110,3 +110,34 @@
 .lock {
     margin-right: 10px;
 }
+
+@media only screen and (max-width: 810px) {
+    .productContainer {
+        flex-wrap: wrap;
+    }
+
+    .imgContainer {
+        width: 350px;
+        margin: auto;
+        margin-top: 50px;
+        flex: auto;
+    }
+
+    .imgContainer img {
+        width: 350px;
+    }
+
+    .descContainer {
+        width: 350px;
+        margin: 20px;
+        flex: auto;
+    }
+
+    .descContainer h2 {
+        font-size: 40px;
+    }
+
+    .dropDownContainer {
+        margin: auto;
+    }
+}

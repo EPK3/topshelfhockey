@@ -52,3 +52,15 @@
     cursor: pointer;
     transform: scale(1.2);
 }
+
+@media only screen and (max-width: 810px) {
+    .productCard {
+        min-width: 300px;
+        min-height: 300px;
+    }
+
+    .infoContainer {
+        min-width: 300px;
+        min-height: 300px;
+    }
+}

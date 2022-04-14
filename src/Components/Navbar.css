@@ -97,3 +97,32 @@ h2 {
     margin: 20px 40px;
     font-size: 18px;
 }
+
+@media only screen and (max-width: 810px) {
+    .navbar {
+    }
+    .logo {
+        height: 40px;
+    }
+
+    .searchBox {
+        width: 0;
+        height: 0;
+        border: none;
+    }
+
+    .searchIcon {
+        font-size: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .login {
+        margin: auto;
+        padding: 10px;
+    }
+
+    .cart {
+        margin-right: 10px;
+    }
+}

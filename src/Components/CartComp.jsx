@@ -61,7 +61,24 @@ const Cart = () => {
           </div>
         </div>
         <div className='cartSummary'>
-          Summary
+          <h3 className='summaryTitle'>Order Summary</h3>
+          <div className='summaryItem'>
+            <p className='summaryText'>Subtotal</p>
+            <p className='summaryPrice'>$419.98</p>
+          </div>
+          <div className='summaryItem'>
+            <p className='summaryText'>Estimated Shipping</p>
+            <p className='summaryPrice'>$5.90</p>
+          </div>
+          <div className='summaryItem'>
+            <p className='summaryText'>Shipping Discount</p>
+            <p className='summaryPrice'>-$5.90</p>
+          </div>
+          <div className='summaryItem'>
+            <p className='summaryTextTotal' type='total'>Total</p>
+            <p className='summaryPriceTotal'>$419.98</p>
+          </div>
+          <h4>Checkout</h4>
         </div>
       </div>
     </div>

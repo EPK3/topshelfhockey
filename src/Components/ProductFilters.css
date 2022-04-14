@@ -48,3 +48,34 @@
     margin-left: 20px;
     background-color: #ffffff;
 }
+
+@media only screen and (max-width: 810px) {
+    .bannerContainer {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title h1 {
+        margin: auto;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .filterContainer {
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    .filter {
+        margin: auto;
+        justify-content: center;
+    }
+
+    .filter p {
+        font-size: 14px;
+    }
+
+    .dropdown {
+        margin: 5px;
+    }
+}

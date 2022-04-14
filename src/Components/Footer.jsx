@@ -12,8 +12,9 @@ const Footer = () => {
         </div>
         <img src={miniLogo} className='miniLogo'/>
         <div className='aboutUs'>
+            <h3>Cart</h3>
+            <h3>Wishlist</h3>
             <h3>About Us</h3>
-            <h3>Contact US</h3>
         </div>
     </div>
   )

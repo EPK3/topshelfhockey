@@ -42,7 +42,8 @@
     font-size: 60px;
     color: #ffffff;
     text-shadow: 3px 3px 3px #000000;
-    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
 }
 
 .promoCard h3 {
@@ -53,10 +54,22 @@
     background-color: #f2c301;
     padding: 10px 20px;
     transition: 0.2s ease-in;
+    justify-content: flex-end;
 }
 
 .promoCard h3:hover {
     transform: scale(1.2);
     cursor: pointer;
     background-color: #fed901;
+}
+
+@media only screen and (max-width: 810px) {
+    .promoCard {
+        margin: 10px;
+        height: 250px;
+    }
+
+    .promoCard h2 {
+        font-size: 40px;
+    }
 }

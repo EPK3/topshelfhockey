@@ -17,7 +17,7 @@ const LoginComp = () => {
             <div className='loginButton'>
                 <h3>Login</h3>
                 <p>Forgot Your Password?</p>
-                <p>Create new account</p>
+                <p>Create New Account</p>
             </div>
         </div>
     </div>

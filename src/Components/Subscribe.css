@@ -78,3 +78,39 @@
     color: #f2c301;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 810px) {
+    .subContainer {
+        flex-wrap: wrap;
+    }
+
+    .subHeader h2 {
+        margin: 20px;
+    }
+
+    .subBox {
+        width: 300px;
+        height: 50px;
+        margin: 20px;
+    }
+
+    .subInput {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .subInput h3 {
+        height: 50px;
+        margin: auto;
+    }
+
+    .socialContainer {
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .socialContainer h2 {
+        margin: auto;
+    }
+}

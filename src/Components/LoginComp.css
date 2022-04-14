@@ -53,19 +53,31 @@
     text-align: center;
     margin: 20px 100px;
     padding: 10px 20px;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #f2c301;
+    color: #000000;
     font-size: 30px;
     border-radius: 10px;
     transition: 0.2s ease-in;
 }
 
 .loginButton h3:hover {
-    background-color: #f2c301;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
     cursor: pointer;
 }
 
 .loginButton p {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 810px) {
+    .logCard {
+        margin: auto;
+        min-width: 300px;
+        width: 325px;
+    }
+
+    .loginButton h3 {
+        font-size: 18px;
+    }
 }
