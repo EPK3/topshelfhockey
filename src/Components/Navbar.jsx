@@ -21,7 +21,7 @@ const Navbar = () => {
                 <h2 className="cart">
                     <span className="fa-layers">
                         <FontAwesomeIcon icon={faShoppingCart}  className='icon' />
-                        <span className="fa-layers-counter">0</span>
+                        <span className="fa-layers-counter">2</span>
                     </span>
                 </h2>
             </div>

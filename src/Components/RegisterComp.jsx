@@ -1,0 +1,30 @@
+import React from 'react'
+import './RegisterComp.css'
+import registerBackground from '../img/register-background.webp'
+
+const RegisterComp = () => {
+  return (
+    <div className='regComp'>
+        <img src={registerBackground} />
+        <div className='regCard'>
+            <div className='regTitle'>
+                <h1>Create An Account</h1>
+            </div>
+            <div className='regInput'>
+                <input type='text' placeholder='First Name'/>
+                <input type='text' placeholder='Last Name'/>
+                <input type='username' placeholder='Username'/>
+                <input type='email' placeholder='E-mail'/>
+                <input type='password' placeholder='Password'/>
+                <input type='password' placeholder='Confirm Password'/>
+            </div>
+            <div className='regCreate'>
+                <p>By creating an account, I consent to the processing of my personal data in accordance with the <h2>Privacy Policy.</h2></p>
+                <h3>Create</h3>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default RegisterComp

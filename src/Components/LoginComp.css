@@ -1,0 +1,71 @@
+.logComp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.logComp img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+    position: relative;
+}
+
+.logCard {
+    position: absolute;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 1px 1px #a0a0a2;
+    padding: 20px;
+    width: 500px;
+}
+
+.logTitle h1 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.logInput {
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logInput input {
+    width: 400px;
+    height: 40px;
+    margin: 3px 5px;
+    font-size: 18px;
+}
+
+.logInput input:focus {
+    outline: none;
+}
+
+.loginButton h3 {
+    text-align: center;
+    margin: 20px 100px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+.loginButton h3:hover {
+    background-color: #f2c301;
+    color: #000000;
+    cursor: pointer;
+}
+
+.loginButton p {
+    cursor: pointer;
+}

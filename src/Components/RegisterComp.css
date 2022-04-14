@@ -1,0 +1,75 @@
+.regComp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.regComp img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+    position: relative;
+}
+
+.regCard {
+    position: absolute;
+    background-color: #fafafa;
+    box-shadow: 1px 1px 1px 1px #a0a0a2;
+    padding: 20px;
+    width: 600px;
+}
+
+.regTitle h1 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.regInput {
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.regInput input {
+    width: 280px;
+    height: 25px;
+    margin: 3px 5px;
+}
+
+.regInput input:focus {
+    outline: none;
+}
+
+.regCreate p h2 {
+    display: inline-flex;
+}
+
+.regCreate h2 {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.regCreate h3 {
+    text-align: center;
+    margin: 20px 50px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+.regCreate h3:hover {
+    background-color: #f2c301;
+    color: #000000;
+    cursor: pointer;
+}
