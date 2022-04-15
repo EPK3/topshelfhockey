@@ -11,7 +11,7 @@ const LoginComp = () => {
         <img src={loginBackground} />
         <div className='logCard'>
             <div className='logTitle'>
-                <Link to='/' className='link'><FontAwesomeIcon icon={faArrowLeft}/></Link>
+                <Link to='/topshelfhockey' className='link'><FontAwesomeIcon icon={faArrowLeft}/></Link>
                 <h1>Login</h1>
             </div>
             <div className='logInput'>

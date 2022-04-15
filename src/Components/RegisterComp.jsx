@@ -11,7 +11,7 @@ const RegisterComp = () => {
         <img src={registerBackground} />
         <div className='regCard'>
             <div className='regTitle'>
-                <Link to='/' className='link'><FontAwesomeIcon icon={faArrowLeft}/></Link>
+                <Link to='/topshelfhockey' className='link'><FontAwesomeIcon icon={faArrowLeft}/></Link>
                 <h1>Create An Account</h1>
             </div>
             <div className='regInput'>
