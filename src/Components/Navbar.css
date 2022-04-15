@@ -100,11 +100,11 @@ h2 {
 
 .link {
     text-decoration: none;
+    margin: auto;
 }
 
 @media only screen and (max-width: 810px) {
-    .navbar {
-    }
+
     .logo {
         height: 40px;
     }
