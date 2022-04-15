@@ -98,6 +98,10 @@ h2 {
     font-size: 18px;
 }
 
+.link {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 810px) {
     .navbar {
     }

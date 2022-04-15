@@ -63,6 +63,10 @@
     background-color: #fed901;
 }
 
+.link {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 810px) {
     .promoCard {
         margin: 10px;

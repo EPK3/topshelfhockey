@@ -5,13 +5,25 @@ import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import Register from './Pages/Register';
 import Login from './Pages/Login';
+import ScrollToTop from './Components/ScrollToTop';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Home/>
+        <ScrollToTop>
+        <Routes>
+          <Route index path='/' element={<Home/>} />
+          <Route path='/productlist' element={<ProductList/>}/>
+          <Route path='/product' element={<Product/>}/>
+          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/login' element={<Login/>}/>
+        </Routes>
+        </ScrollToTop>
       </div>
+      
     );
   }
 }

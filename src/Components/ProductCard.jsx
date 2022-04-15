@@ -2,6 +2,7 @@ import React from 'react';
 import './ProductCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faSearch,  faHeart} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const ProductCard = ({item}) => {
@@ -15,7 +16,9 @@ const ProductCard = ({item}) => {
                 <FontAwesomeIcon icon={faCartPlus} className="productIcon" />
             </div>
             <div className='iconContainer'>
+            <Link to='/product'>
                 <FontAwesomeIcon icon={faSearch} className="productIcon" />
+            </Link>
             </div>
             <div className='iconContainer'>
                 <FontAwesomeIcon icon={faHeart} className="productIcon" />

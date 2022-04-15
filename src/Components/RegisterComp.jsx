@@ -1,6 +1,9 @@
 import React from 'react'
 import './RegisterComp.css'
 import registerBackground from '../img/register-background.webp'
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 const RegisterComp = () => {
   return (
@@ -8,6 +11,7 @@ const RegisterComp = () => {
         <img src={registerBackground} />
         <div className='regCard'>
             <div className='regTitle'>
+                <Link to='/' className='link'><FontAwesomeIcon icon={faArrowLeft}/></Link>
                 <h1>Create An Account</h1>
             </div>
             <div className='regInput'>

@@ -70,6 +70,11 @@
     cursor: pointer;
 }
 
+.link {
+    text-decoration: none;
+    color: #000000;
+}
+
 @media only screen and (max-width: 810px) {
     .logCard {
         margin: auto;

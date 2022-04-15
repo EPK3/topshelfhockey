@@ -41,6 +41,10 @@
     cursor: pointer;
 }
 
+.link {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 810px) {
     .miniLogo {
         width: 50px;
