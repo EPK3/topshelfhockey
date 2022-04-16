@@ -23,7 +23,9 @@
     align-content: center;
     opacity: 1;
     min-width: 400px;
+    max-width: 400px;
     min-height: 400px;
+    max-height: 400px;
     background-color: #f0f0f0;
     opacity: 0;
     transition: 0.5s ease-in;
@@ -60,7 +62,7 @@
     }
 
     .infoContainer {
-        min-width: 300px;
-        min-height: 300px;
+        min-width: 350px;
+        min-height: 350px;
     }
 }
