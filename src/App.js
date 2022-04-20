@@ -14,7 +14,7 @@ class App extends Component {
       <div>
         <ScrollToTop>
         <Routes>
-          <Route exact path='/' element={<Home/>} />
+          <Route index path='/' element={<Home/>} />
           <Route path='/products/' element={<ProductList/>}/>
           <Route path='/product/' element={<Product/>}/>
           <Route path='/cart' element={<Cart/>}/>
