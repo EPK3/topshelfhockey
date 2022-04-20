@@ -40,21 +40,21 @@ const Cart = () => {
           </div>
           <div className='cartProduct'>
             <div className='itemImg'>
-              <img src='https://i.ibb.co/Jj4kr63/ccm-hockey-helmet.png' /> 
+              <img src='https://i.ibb.co/5hGZdYw/bauer-hockey-skates.png' /> 
             </div>
             <div className='itemSummaryWrapper'>
               <div className='itemSummary'>
-                <h5>Product: </h5><p className='itemName'>CCM Tacks 910 Hockey Helmet</p>
+                <h5>Product: </h5><p className='itemName'>Bauer Vapor X3.7 Hockey Skates</p>
               </div>
               <div className='itemSummary'>
                 <h5>ID: </h5><p className='itemId'>759275927</p>
               </div>
               <div className='itemSummary'>
-                <h5>Size: </h5><p className='itemSize'>M</p>
+                <h5>Size: </h5><p className='itemSize'>11</p>
               </div>
             </div>
             <div className='itemPriceCont'>
-              <p className='itemPrice'>$229.99</p>
+              <p className='itemPrice'>$249.99</p>
               <p className='itemQuantity'>Qty: 1</p>
             </div>
             <p className='removeItem'>Remove</p>
@@ -64,7 +64,7 @@ const Cart = () => {
           <h3 className='summaryTitle'>Order Summary</h3>
           <div className='summaryItem'>
             <p className='summaryText'>Subtotal</p>
-            <p className='summaryPrice'>$419.98</p>
+            <p className='summaryPrice'>$439.98</p>
           </div>
           <div className='summaryItem'>
             <p className='summaryText'>Estimated Shipping</p>
@@ -76,7 +76,7 @@ const Cart = () => {
           </div>
           <div className='summaryItem'>
             <p className='summaryTextTotal' type='total'>Total</p>
-            <p className='summaryPriceTotal'>$419.98</p>
+            <p className='summaryPriceTotal'>$439.98</p>
           </div>
           <h4>Checkout</h4>
         </div>

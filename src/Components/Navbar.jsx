@@ -12,10 +12,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return(
         <div className = "navbar">
-            <Link to='/topshelfhockey'><img className="logo" src={logo} alt='logo'/></Link>
+            <Link to='/'><img className="logo" src={logo} alt='logo'/></Link>
             <div className="searchBar">
                 <input type='search'  placeholder="Search..." className="searchBox"/>
-                <Link to='/productlist' className="link">
+                <Link to='/products' className="link">
                     <FontAwesomeIcon icon={faSearch} className='searchIcon'></FontAwesomeIcon>
                 </Link>
             </div>

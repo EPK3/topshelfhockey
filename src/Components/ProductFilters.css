@@ -47,6 +47,7 @@
 .dropdown {
     margin-left: 20px;
     background-color: #ffffff;
+    width: 200px;
 }
 
 @media only screen and (max-width: 810px) {

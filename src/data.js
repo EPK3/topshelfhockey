@@ -3,6 +3,7 @@ export const popularProducts = [
     {
         id: 1,
         img: "https://i.ibb.co/mS9B4kC/warrior-hockey-stick.png",
+        category: "stick",
     },
     {
         id: 2,

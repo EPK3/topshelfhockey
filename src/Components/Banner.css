@@ -40,9 +40,18 @@ h4 {
     font-size: 55px;
     line-height: 0.9;
 }
+@media only screen and (max-width: 1080px) {
+    .banner{
+        height: 100vh;
+    }
+}
 
 @media only screen and (max-width: 810px) {
     .sale {
         margin: auto;
+    }
+    
+    .banner{
+        height: 80vh;
     }
 }

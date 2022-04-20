@@ -103,7 +103,7 @@ h2 {
     margin: auto 0;
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 1080px) {
 
     .logo {
         height: 40px;

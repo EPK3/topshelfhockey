@@ -3,6 +3,7 @@ import './Products.css';
 import { popularProducts } from '../data';
 import ProductCard from './ProductCard';
 
+
 const Products = () => {
   return (
     <div className='productsContainer'>

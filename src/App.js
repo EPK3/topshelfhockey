@@ -14,16 +14,15 @@ class App extends Component {
       <div>
         <ScrollToTop>
         <Routes>
-          <Route index path='/topshelfhockey' element={<Home/>} />
-          <Route path='/productlist' element={<ProductList/>}/>
-          <Route path='/product' element={<Product/>}/>
+          <Route exact path='/' element={<Home/>} />
+          <Route path='/products/' element={<ProductList/>}/>
+          <Route path='/product/' element={<Product/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>
         </Routes>
         </ScrollToTop>
       </div>
-      
     );
   }
 }

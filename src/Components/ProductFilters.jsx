@@ -1,21 +1,41 @@
-import React from 'react'
-import Select from 'react-dropdown-select'
+import React, { useState } from 'react'
+import { useLocation } from 'react-router'
+import Select from 'react-select'
 import './ProductFilters.css'
 
-const filterOptions = [
-    { value: 'all', label: 'All'},
-    { value: 'sticks', label: 'Sticks' },
-    { value: 'skates', label: 'Skates' },
-    { value: 'gear', label: 'Protective Gear' }
-  ]
-
-  const sortOptions = [
-    { value: 'newest', label: 'Newest' },
-    { value: 'priceLow', label: 'Price: Low to High' },
-    { value: 'priceHigh', label: 'Price: High to Low' }
-  ]
 
 const ProductFilters = () => {
+  const location = useLocation();
+  const cat = location.pathname.split('/')[2];
+  const [filter, setFilters] = useState({});
+  const [sort, setSort] = useState({});
+  
+
+  const filterOptions = [
+    { value: 'all', label: 'All', name: "category"},
+    { value: 'sticks', label: 'Sticks', name: "category" },
+    { value: 'skates', label: 'Skates', name: "category" },
+    { value: 'gear', label: 'Protective Gear', name: "category"}
+  ];
+
+  const sortOptions = [
+    { value: 'newest', label: 'Newest', name: "sort" },
+    { value: 'priceLow', label: 'Price: Low to High', name: "sort" },
+    { value: 'priceHigh', label: 'Price: High to Low', name: "sort" }
+  ];
+  
+  const handleFilters = (option) => {
+    setFilters({
+      [option.name]: option.value,
+    });
+  };
+
+  const handleSort = (option) => {
+    setSort({
+      [option.name]: option.value,
+    });
+  };
+
   return (
     <div className='bannerContainer'>
         <div className='blockContainer'>
@@ -25,11 +45,11 @@ const ProductFilters = () => {
             <div className='filterContainer'>
                 <div className='filter'>
                     <p>Filter:</p>
-                    <Select options={filterOptions} className='dropdown'/>
+                    <Select onChange={ handleFilters } options={filterOptions} className='dropdown'/>
                 </div>
                 <div className='filter push'>
                     <p>Sort:</p>
-                    <Select options={sortOptions} className='dropdown'/>
+                    <Select onChange={ handleSort } options={sortOptions} className='dropdown'/>
                 </div>
             </div>
         </div>
