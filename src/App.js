@@ -16,7 +16,7 @@ class App extends Component {
         <Routes>
           <Route index path='/topshelfhockey' element={<Home/>} />
           <Route path='/products/' element={<ProductList/>}/>
-          <Route path='/product/' element={<Product/>}/>
+          <Route path='/product/:id' element={<Product/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/login' element={<Login/>}/>

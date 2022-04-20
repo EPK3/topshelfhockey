@@ -16,7 +16,7 @@ const ProductCard = ({item}) => {
                 <FontAwesomeIcon icon={faCartPlus} className="productIcon" />
             </div>
             <div className='iconContainer'>
-            <Link to='/product'>
+            <Link to={`/product/${item.id}`}>
                 <FontAwesomeIcon icon={faSearch} className="productIcon" />
             </Link>
             </div>

@@ -23,6 +23,7 @@
 
 .descContainer h2 {
     font-size: 60px;
+    text-align: center;
 }
 
 .descContainer h3 {
@@ -45,11 +46,13 @@
 }
 
 .originalPrice {
+    display: inline-flex;
     margin-left: 10px;
     text-decoration: line-through;
 }
 
 .price {
+    display: inline-flex;
     color: red;
 }
 
