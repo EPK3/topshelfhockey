@@ -9,14 +9,14 @@ const ProductCard = ({item}) => {
   return (
     <div className='productCard'>
         <div className='productImage'>
-            <img src={item.img}/>
+            <img src={item.img} alt='Something went wrong..'/>
         </div>
         <div className='infoContainer'>
             <div className='iconContainer'>
                 <FontAwesomeIcon icon={faCartPlus} className="productIcon" />
             </div>
             <div className='iconContainer'>
-            <Link to={`/product/${item.id}`}>
+            <Link to={`/product/${item.id}`} aria-label='productLink'>
                 <FontAwesomeIcon icon={faSearch} className="productIcon" />
             </Link>
             </div>

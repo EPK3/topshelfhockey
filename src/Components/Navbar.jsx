@@ -15,7 +15,7 @@ const Navbar = () => {
             <Link to='/topshelfhockey'><img className="logo" src={logo} alt='logo'/></Link>
             <div className="searchBar">
                 <input type='search'  placeholder="Search..." className="searchBox"/>
-                <Link to='/products' className="link">
+                <Link to='/products' className="link" aria-label="searchProducts">
                     <FontAwesomeIcon icon={faSearch} className='searchIcon'></FontAwesomeIcon>
                 </Link>
             </div>
