@@ -5,10 +5,10 @@ const Banner = () => {
     return(
         <div className = "banner">
             <div className='sale'>
-                <h4>summer sale</h4>
-                <h3>up to</h3>
-                <h1>80%</h1>
-                <h5>off</h5>
+                <h1>summer sale</h1>
+                <h2>up to</h2>
+                <h3>80%</h3>
+                <h4>off</h4>
             </div>
         </div>
     );
