@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/topshelfhockey/static/css/main.cc722de6.css",
-    "main.js": "/topshelfhockey/static/js/main.8a009985.js",
+    "main.js": "/topshelfhockey/static/js/main.a7be4078.js",
     "static/js/787.f629e091.chunk.js": "/topshelfhockey/static/js/787.f629e091.chunk.js",
     "static/media/product-banner.webp": "/topshelfhockey/static/media/product-banner.c770023321b93aa5449f.webp",
     "static/media/outdoor-rink.webp": "/topshelfhockey/static/media/outdoor-rink.8413e63c815974dae05f.webp",
@@ -12,11 +12,11 @@
     "static/media/hockeygear.webp": "/topshelfhockey/static/media/hockeygear.08c4d83ceed75d050218.webp",
     "index.html": "/topshelfhockey/index.html",
     "main.cc722de6.css.map": "/topshelfhockey/static/css/main.cc722de6.css.map",
-    "main.8a009985.js.map": "/topshelfhockey/static/js/main.8a009985.js.map",
+    "main.a7be4078.js.map": "/topshelfhockey/static/js/main.a7be4078.js.map",
     "787.f629e091.chunk.js.map": "/topshelfhockey/static/js/787.f629e091.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cc722de6.css",
-    "static/js/main.8a009985.js"
+    "static/js/main.a7be4078.js"
   ]
 }
