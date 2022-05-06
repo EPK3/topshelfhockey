@@ -2,7 +2,7 @@
 export const popularProducts = [
     {
         id: 1,
-        img: "https://i.ibb.co/mS9B4kC/warrior-hockey-stick.png",
+        img: "https://i.ibb.co/FwynhHL/warrior-hockey-stick.webp",
         name: "Warrior Covert QR Edge Grip",
         sale_price: "$189.98",
         og_price: "$259.99",
@@ -10,7 +10,7 @@ export const popularProducts = [
     },
     {
         id: 2,
-        img: "https://i.ibb.co/1mTMXDH/ccm-hockey-stick.png",
+        img: "https://i.ibb.co/64jzjzm/ccm-hockey-stick.webp",
         name: "CCM RibCor 76K Grip",
         sale_price: "$109.99",
         og_price: "$129.99",
@@ -18,7 +18,7 @@ export const popularProducts = [
     },
     {
         id: 3,
-        img: "https://i.ibb.co/3pNKwKd/bauer-hockey-stick.png",
+        img: "https://i.ibb.co/bgqb30c/bauer-hockey-stick.webp",
         name: "Bauer Vapor 3X Grip",
         sale_price: "$159.99",
         og_price: "$189.99",
@@ -26,7 +26,7 @@ export const popularProducts = [
     },
     {
         id: 4,
-        img: "https://i.ibb.co/PgjnT9C/sherwood-hockey-stick.png",
+        img: "https://i.ibb.co/bQ4YpWg/sherwood-hockey-stick.webp",
         name: "Sherwood Rekker Element 1",
         sale_price: "$259.99",
         og_price: "$279.99",
@@ -34,7 +34,7 @@ export const popularProducts = [
     },
     {
         id: 5,
-        img: "https://i.ibb.co/5hGZdYw/bauer-hockey-skates.png",
+        img: "https://i.ibb.co/vk06Cxb/bauer-hockey-skates.webp",
         name: "Bauer Vapor X3.7",
         sale_price: "$249.99",
         og_price: "$289.99",
@@ -42,7 +42,7 @@ export const popularProducts = [
     },
     {
         id: 6,
-        img: "https://i.ibb.co/Lt6xQFH/ccm-hockey-skates.png",
+        img: "https://i.ibb.co/Xy1SrrB/ccm-hockey-skates.webp",
         name: "CCM Ribcor 86K",
         sale_price: "$229.99",
         og_price: "$269.99",
@@ -50,7 +50,7 @@ export const popularProducts = [
     },
     {
         id: 7,
-        img: "https://i.ibb.co/FH64hTm/graf-hockey-skates.png",
+        img: "https://i.ibb.co/whcBVTF/graf-hockey-skates.webp",
         name: "Graf G755 Pro",
         sale_price: "$549.99",
         og_price: "$569.99",
@@ -58,7 +58,7 @@ export const popularProducts = [
     },
     {
         id: 8,
-        img: "https://i.ibb.co/sQ932F0/true-hockey-skates.png",
+        img: "https://i.ibb.co/Qnkrg9F/true-hockey-skates.webp",
         name: "True TF7",
         sale_price: "$329.99",
         og_price: "$369.99",
@@ -66,7 +66,7 @@ export const popularProducts = [
     },
     {
         id: 9,
-        img: "https://i.ibb.co/Jj4kr63/ccm-hockey-helmet.png",
+        img: "https://i.ibb.co/MV5mSVq/ccm-hockey-helmet.webp",
         name: "CCM Tacks 910 Hockey Helmet",
         sale_price: "$229.99",
         og_price: "$289.99",
@@ -74,7 +74,7 @@ export const popularProducts = [
     },
     {
         id: 10,
-        img: "https://i.ibb.co/5298298/warrior-hockey-gloves.png",
+        img: "https://i.ibb.co/cxw6GkC/warrior-hockey-gloves.webp",
         name: "Warrior Alpha DX3 Hockey Gloves",
         sale_price: "$129.99",
         og_price: "$149.99",
@@ -82,7 +82,7 @@ export const popularProducts = [
     },
     {
         id: 11,
-        img: "https://i.ibb.co/552M3p8/warrior-hockey-shoulder.png",
+        img: "https://i.ibb.co/qN5Tx1f/warrior-hockey-shoulder.webp",
         name: "Warrior Alpha DX3 Shoulder Pads",
         sale_price: "$89.99",
         og_price: "$99.99",
@@ -90,7 +90,7 @@ export const popularProducts = [
     },
     {
         id: 12,
-        img: "https://i.ibb.co/r6xBBmD/ccm-hockey-shin-guards.png",
+        img: "https://i.ibb.co/1sdXb7B/ccm-hockey-shin-guards.webp",
         name: "CCM Tacks 9060 Shin Guards",
         sale_price: "$99.99",
         og_price: "$109.99",
