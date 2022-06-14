@@ -2,6 +2,7 @@
     margin: 20px;
     align-items: center;
     justify-content: center;
+    text-align: center;
     min-width: 400px;
     max-width: 400px;
     min-height: 400px;
@@ -19,8 +20,10 @@
 .infoContainer {
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
+    text-align: center;
     opacity: 1;
     min-width: 400px;
     max-width: 400px;
@@ -29,6 +32,11 @@
     background-color: #f0f0f0;
     opacity: 0;
     transition: 0.5s ease-in;
+    overflow: hidden;
+}
+
+.icons {
+    display: inline-flex;
 }
 
 .iconContainer {
@@ -53,6 +61,28 @@
 .productIcon:hover {
     cursor: pointer;
     transform: scale(1.2);
+}
+
+.productName {
+    display: flex;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.productSalePrice {
+    display: flex;
+    margin-top: 50px;
+}
+
+.productName h1 {
+    margin: auto;
+    font-size: 30px;
+}
+
+.productSalePrice h2 {
+    margin: auto;
+    font-size: 30px;
+    color: red;
 }
 
 @media only screen and (max-width: 810px) {

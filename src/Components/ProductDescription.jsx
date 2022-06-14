@@ -20,7 +20,6 @@ const ProductDescription = () => {
   const productId = location.pathname.split("/")[2];
   const product = popularProducts.find(object => object.id === Number(productId));
   
-  console.log(product);
 
   return (
     <div className='productContainer'>
