@@ -20,6 +20,7 @@
     font-size: 18px;
     color: #ffffff;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 .aboutUs h3 {
@@ -58,6 +59,7 @@
 
     .contactInfo h3 {
         font-size: 14px;
+        line-height: normal;
     }
 
     .aboutUs {
