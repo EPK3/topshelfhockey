@@ -76,11 +76,19 @@
 
 .productName h1 {
     margin: auto;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .productSalePrice h2 {
     margin: auto;
+}
+
+.ogPrice {
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+.salePrice {
     font-size: 30px;
     color: red;
 }

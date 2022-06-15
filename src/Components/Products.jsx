@@ -16,6 +16,7 @@ const Products = () => {
         name,
         slug,
         sale_price,
+        og_price,
       }`
     )
     .then((data) => setProductData(data))

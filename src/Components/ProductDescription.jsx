@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock } from "@fortawesome/free-solid-svg-icons";
-import React from 'react';
+import { faLock, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import './ProductDescription.css';
-import { popularProducts } from '../data';
-import { useLocation } from 'react-router';
+import { client, urlFor } from '../lib/client';
+import { useParams } from 'react-router';
+
 
 
 
@@ -16,31 +17,51 @@ const sizeOptions = [
 ]
 
 const ProductDescription = () => {
-  const location = useLocation();
-  const productId = location.pathname.split("/")[2];
-  const product = popularProducts.find(object => object.id === Number(productId));
   
+  const [productData, setProductData] = useState(null);
+  const { slug } = useParams();
+
+  useEffect(()=>{
+    client.fetch(
+      `*[slug.current == $slug]{
+        image,
+        name,
+        slug,
+        sale_price,
+        og_price,
+        details
+      }`,
+      { slug }
+    )
+    .then((data) => setProductData(data[0]))
+  }, [slug]);
+
+  if (!productData) return <div className='loadingData'><h1>Loading...</h1></div>
 
   return (
     <div className='productContainer'>
       <div className='imgContainer'>
-          <img src={product.img} />
+          <img src={urlFor(productData.image && productData.image[0])} />
       </div>
       <div className='descContainer'>
-          <h2>{product.name}</h2>
-          <h3>{product.desc}</h3>
-          <h4>As low as <p className='price'>{product.sale_price}</p></h4>
-          <h5>Original Price <p className='originalPrice'>{product.og_price}</p></h5>
-          <div className='dropDownContainer'>
-            <div className='stickFilter'>
-              <Select options={sizeOptions} placeholder='Choose Size...' className='stickDropdown'/>
-            </div>
-          </div>
-          <div className='addCart'>
-            <div className='quantity'>
+          <h2>{productData.name}</h2>
+          <h3>{productData.details}</h3>
+          <h4>As low as <p className='price'>{productData.sale_price}</p></h4>
+          <h5>Original Price <p className='originalPrice'>{productData.og_price}</p></h5>
+          <div className='quantity'>
               <h5>Qty:</h5>
-              <input type='text' id='quantity' className='productQuantity' placeholder='1' required />
+              <div className='qtyDiv'>
+                <span className='minusQty' onClick=''><FontAwesomeIcon icon={faMinus} className='plusMinus' /></span>
+                <span className='numQty' onClick=''>1</span>
+                <span className='plusQty' onClick=''><FontAwesomeIcon icon={faPlus} className='plusMinus' /></span>
+              </div>
+              <div className='dropDownContainer'>
+                <div className='stickFilter'>
+                  <Select options={sizeOptions} placeholder='Choose Size...' className='stickDropdown'/>
+                </div>
+              </div>
             </div>
+          <div className='addCart'>
             <div className='addToCart'>
               <div id='addToCart'><FontAwesomeIcon icon={faLock} className='lock' />Add To Cart</div>
             </div>

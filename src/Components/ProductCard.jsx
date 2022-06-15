@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { urlFor } from '../lib/client';
 
 
-const ProductCard = ({product: { image, name, slug, sale_price }}) => {
+const ProductCard = ({product: { image, name, slug, sale_price, og_price }}) => {
   return (
     <div className='productCard'>
         <div className='productImage'>
@@ -30,7 +30,8 @@ const ProductCard = ({product: { image, name, slug, sale_price }}) => {
                 </div>
             </div>
             <div className='productSalePrice'>
-                <h2>${sale_price}</h2>
+                <h2 className='ogPrice'>${og_price}</h2>
+                <h2 className='salePrice'>${sale_price}</h2>
             </div>
         </div>
     </div>
