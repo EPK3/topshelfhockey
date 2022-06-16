@@ -5,6 +5,7 @@ import Select from 'react-select';
 import './ProductDescription.css';
 import { client, urlFor } from '../lib/client';
 import { useParams } from 'react-router';
+import { useStateContext } from '../context/StateContext';
 
 
 
@@ -17,7 +18,7 @@ const sizeOptions = [
 ]
 
 const ProductDescription = () => {
-  
+  const { decQty, incQty, qty, onAdd } = useStateContext();
   const [productData, setProductData] = useState(null);
   const { slug } = useParams();
 
@@ -38,6 +39,8 @@ const ProductDescription = () => {
 
   if (!productData) return <div className='loadingData'><h1>Loading...</h1></div>
 
+  
+
   return (
     <div className='productContainer'>
       <div className='imgContainer'>
@@ -51,9 +54,9 @@ const ProductDescription = () => {
           <div className='quantity'>
               <h5>Qty:</h5>
               <div className='qtyDiv'>
-                <span className='minusQty' onClick=''><FontAwesomeIcon icon={faMinus} className='plusMinus' /></span>
-                <span className='numQty' onClick=''>1</span>
-                <span className='plusQty' onClick=''><FontAwesomeIcon icon={faPlus} className='plusMinus' /></span>
+                <span className='minusQty' onClick={decQty}><FontAwesomeIcon icon={faMinus} className='plusMinus' /></span>
+                <span className='numQty'>{qty}</span>
+                <span className='plusQty' onClick={incQty}><FontAwesomeIcon icon={faPlus} className='plusMinus' /></span>
               </div>
               <div className='dropDownContainer'>
                 <div className='stickFilter'>
@@ -63,7 +66,7 @@ const ProductDescription = () => {
             </div>
           <div className='addCart'>
             <div className='addToCart'>
-              <div id='addToCart'><FontAwesomeIcon icon={faLock} className='lock' />Add To Cart</div>
+              <div id='addToCart' onClick={() => onAdd(productData, qty)}><FontAwesomeIcon icon={faLock} className='lock' />Add To Cart</div>
             </div>
           </div>
       </div>

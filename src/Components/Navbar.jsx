@@ -6,10 +6,12 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useStateContext } from "../context/StateContext";
 
 
 
 const Navbar = () => {
+    const { totalQuantities } = useStateContext();
     return(
         <div className = "navbar">
             <Link to='/topshelfhockey'><img className="logo" src={logo} alt='logo'/></Link>
@@ -28,7 +30,7 @@ const Navbar = () => {
                 <h2 className="cart">
                     <span className="fa-layers">
                         <FontAwesomeIcon icon={faShoppingCart}  className='icon' />
-                        <span className="fa-layers-counter">2</span>
+                        <span className="fa-layers-counter">{totalQuantities}</span>
                     </span>
                 </h2>
                 </Link>

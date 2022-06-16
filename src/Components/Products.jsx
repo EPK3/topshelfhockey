@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Products.css';
-import { popularProducts } from '../data';
 import ProductCard from './ProductCard';
 import { client } from '../lib/client';
 
@@ -21,8 +20,6 @@ const Products = () => {
     )
     .then((data) => setProductData(data))
   }, []);
-
-  console.log(productData);
 
   return (
     <div className='productsContainer'>

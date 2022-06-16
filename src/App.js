@@ -14,9 +14,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <StateContext>  */}
-          {/* <Toaster/> */}
           <ScrollToTop>
+            <StateContext>
+            <Toaster/>
             <Routes>
               <Route index path='/topshelfhockey' element={<Home/>} />
               <Route path='/products/' element={<ProductList/>}/>
@@ -25,8 +25,8 @@ class App extends Component {
               <Route path='/register' element={<Register/>}/>
               <Route path='/login' element={<Login/>}/>
             </Routes>
+            </StateContext>
           </ScrollToTop>
-        {/* </StateContext> */}
       </div>
     );
   }

@@ -1,13 +1,15 @@
 import React from 'react'
 import './CartComp.css'
+import { useStateContext } from '../context/StateContext';
 
 const Cart = () => {
+  const { totalQuantities } = useStateContext();
   return (
     <div className='cartContainer'>
       <div className='cartHeader'>
         <h1>Your Cart</h1>
         <div className='cartWishlist'>
-          <h2>Cart (2)</h2>
+          <h2>Cart ({totalQuantities})</h2>
           <h2>Wishlist (0)</h2>
         </div>
         <div className='contCheck'>
