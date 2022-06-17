@@ -9,7 +9,7 @@ import { urlFor } from '../lib/client';
 
 
 const Cart = () => {
-  const { totalPrice, totalQuantities, cartItems, setShowCart } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
   const cartRef = useRef();
   
 
@@ -38,14 +38,14 @@ const Cart = () => {
                 <div className='nameQty'>
                   <h4 className='itemName'>{item.name}</h4>
                   <div className='qtyDiv'>
-                    <span className='minusQty' onClick=""><FontAwesomeIcon icon={faMinus} className='plusMinus' /></span>
-                    <span className='numQty'>1</span>
-                    <span className='plusQty' onClick=''><FontAwesomeIcon icon={faPlus} className='plusMinus' /></span>
+                    <span className='minusQty' onClick={()=> toggleCartItemQuantity(item.slug.current, 'dec')}><FontAwesomeIcon icon={faMinus} className='plusMinus' /></span>
+                    <span className='numQty'>{item.quantity}</span>
+                    <span className='plusQty' onClick={()=> toggleCartItemQuantity(item.slug.current, 'inc')}><FontAwesomeIcon icon={faPlus} className='plusMinus' /></span>
                   </div>
                 </div>
                 <div className='priceRemove'>
                   <h5 className='itemPrice'>${item.sale_price}</h5>
-                  <button type='button' className='remove' onClick='' >Remove</button>
+                  <button type='button' className='remove' onClick={() => onRemove(item)}>Remove</button>
                 </div>
               </div>
             </div>
@@ -55,9 +55,9 @@ const Cart = () => {
         <div className='cartBottom'>
           <div className='total'>
             <h3>Subtotal:</h3>
-            <h3>${totalPrice}</h3>
+            <h3>${totalPrice.toFixed(2)}</h3>
           </div>
-          <button type='button' className='checkout' onClick='' >Checkout</button>
+          <button type='button' className='checkout' onClick='' ><FontAwesomeIcon icon={faLock} className='lock' />Checkout</button>
         </div>
       )}
       </div>
