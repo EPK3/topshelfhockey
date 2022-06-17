@@ -7,11 +7,12 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useStateContext } from "../context/StateContext";
+import CartComp from './CartComp';
 
 
 
 const Navbar = () => {
-    const { totalQuantities } = useStateContext();
+    const { showCart, setShowCart, totalQuantities } = useStateContext();
     return(
         <div className = "navbar">
             <Link to='/topshelfhockey'><img className="logo" src={logo} alt='logo'/></Link>
@@ -26,15 +27,14 @@ const Navbar = () => {
                 <Link to='/login' className="link">
                 <h2 className="login"><FontAwesomeIcon icon={faUser} className='icon' /> Sign In</h2>
                 </Link>
-                <Link to='/cart'>
                 <h2 className="cart">
-                    <span className="fa-layers">
+                    <span className="fa-layers" onClick={() => setShowCart(true)}>
                         <FontAwesomeIcon icon={faShoppingCart}  className='icon' />
                         <span className="fa-layers-counter">{totalQuantities}</span>
                     </span>
                 </h2>
-                </Link>
             </div>
+            {showCart && <CartComp/>}
         </div>
     );
 }

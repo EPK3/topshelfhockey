@@ -83,12 +83,14 @@
 
 .quantity {
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .quantity h5 {
     font-size: 20px;
     font-weight: 400;
+    margin-right: 20px;
 }
 
 .quantity h5:after {
@@ -133,12 +135,12 @@
     display: inline-flex;
     text-align: center;
     justify-content: center;
-    align-content: center;
-    margin-left: 10px;
+    margin: auto;
     border: 1px solid #c7c7c7;
     border-radius: 5px;
     color: #a0a0a2;
     height: 35px;
+    width: 120px;
 }
 .minusQty, .plusQty {
     display: flex;
@@ -186,6 +188,14 @@
     }
 
     .dropDownContainer {
+        margin: auto;
+    }
+
+    .quantity {
+        margin-top: 50px;
+    }
+
+    .quantity h5 {
         margin: auto;
     }
 }

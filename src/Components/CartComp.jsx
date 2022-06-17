@@ -1,87 +1,65 @@
-import React from 'react'
-import './CartComp.css'
+import React, { useRef } from 'react'
+import './CartComp.css';
 import { useStateContext } from '../context/StateContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLock, faMinus, faPlus, faArrowAltCircleLeft, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import toast from 'react-hot-toast';
+import { urlFor } from '../lib/client';
+
+
 
 const Cart = () => {
-  const { totalQuantities } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart } = useStateContext();
+  const cartRef = useRef();
+  
+
   return (
-    <div className='cartContainer'>
-      <div className='cartHeader'>
-        <h1>Your Cart</h1>
-        <div className='cartWishlist'>
-          <h2>Cart ({totalQuantities})</h2>
-          <h2>Wishlist (0)</h2>
+    <div className='cartWrapper' ref={cartRef}>
+      <div className='cartContainer'>
+        <button type='button' onClick={()=> setShowCart(false)} className='cartButton'>
+          <FontAwesomeIcon icon={faArrowAltCircleLeft} className='arrowIcon'/>
+          <span className='heading'>Your Cart ({totalQuantities})</span>
+        </button>
+        {cartItems.length < 1 &&(
+          <div className='empty'>
+            <FontAwesomeIcon icon={faShoppingCart} className='cartIcon'/>
+            <h1 className='emptyHeader'>Your Cart Is Empty...</h1>
+            <button type='button' onClick={()=> setShowCart(false)} className='continueShopping'>
+              Continue Shopping
+            </button>
+          </div>
+        )}
+
+        <div className='productCart'>
+          {cartItems.length >= 1 && cartItems.map((item)=> (
+            <div className='product' key={item._id}>
+              <img src={urlFor(item?.image[0])} className='cartProductImage'/>
+              <div className='itemDesc'>
+                <div className='nameQty'>
+                  <h4 className='itemName'>{item.name}</h4>
+                  <div className='qtyDiv'>
+                    <span className='minusQty' onClick=""><FontAwesomeIcon icon={faMinus} className='plusMinus' /></span>
+                    <span className='numQty'>1</span>
+                    <span className='plusQty' onClick=''><FontAwesomeIcon icon={faPlus} className='plusMinus' /></span>
+                  </div>
+                </div>
+                <div className='priceRemove'>
+                  <h5 className='itemPrice'>${item.sale_price}</h5>
+                  <button type='button' className='remove' onClick='' >Remove</button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className='contCheck'>
-          <h3>Continue Shopping</h3>
-          <h3>Checkout Now</h3>
+      {cartItems.length >= 1 && (
+        <div className='cartBottom'>
+          <div className='total'>
+            <h3>Subtotal:</h3>
+            <h3>${totalPrice}</h3>
+          </div>
+          <button type='button' className='checkout' onClick='' >Checkout</button>
         </div>
-      </div>
-      <div className='cartWrapper'>
-        <div className='cartItems'>
-          <div className='cartProduct'>
-            <div className='itemImg'>
-              <img src='https://i.ibb.co/mS9B4kC/warrior-hockey-stick.png' /> 
-            </div>
-            <div className='itemSummaryWrapper'>
-              <div className='itemSummary'>
-                <h5>Product: </h5><p className='itemName'>Warrior Covert Edge Grip</p>
-              </div>
-              <div className='itemSummary'>
-                <h5>ID: </h5><p className='itemId'>984907119</p>
-              </div>
-              <div className='itemSummary'>
-                <h5>Size: </h5><p className='itemSize'>Right 85</p>
-              </div>
-            </div>
-            <div className='itemPriceCont'>
-              <p className='itemPrice'>$189.99</p>
-              <p className='itemQuantity'>Qty: 1</p>
-            </div>
-            <p className='removeItem'>Remove</p>
-          </div>
-          <div className='cartProduct'>
-            <div className='itemImg'>
-              <img src='https://i.ibb.co/5hGZdYw/bauer-hockey-skates.png' /> 
-            </div>
-            <div className='itemSummaryWrapper'>
-              <div className='itemSummary'>
-                <h5>Product: </h5><p className='itemName'>Bauer Vapor X3.7 Hockey Skates</p>
-              </div>
-              <div className='itemSummary'>
-                <h5>ID: </h5><p className='itemId'>759275927</p>
-              </div>
-              <div className='itemSummary'>
-                <h5>Size: </h5><p className='itemSize'>11</p>
-              </div>
-            </div>
-            <div className='itemPriceCont'>
-              <p className='itemPrice'>$249.99</p>
-              <p className='itemQuantity'>Qty: 1</p>
-            </div>
-            <p className='removeItem'>Remove</p>
-          </div>
-        </div>
-        <div className='cartSummary'>
-          <h3 className='summaryTitle'>Order Summary</h3>
-          <div className='summaryItem'>
-            <p className='summaryText'>Subtotal</p>
-            <p className='summaryPrice'>$439.98</p>
-          </div>
-          <div className='summaryItem'>
-            <p className='summaryText'>Estimated Shipping</p>
-            <p className='summaryPrice'>$5.90</p>
-          </div>
-          <div className='summaryItem'>
-            <p className='summaryText'>Shipping Discount</p>
-            <p className='summaryPrice'>-$5.90</p>
-          </div>
-          <div className='summaryItem'>
-            <p className='summaryTextTotal' type='total'>Total</p>
-            <p className='summaryPriceTotal'>$439.98</p>
-          </div>
-          <h4>Checkout</h4>
-        </div>
+      )}
       </div>
     </div>
   )
