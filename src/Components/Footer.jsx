@@ -1,7 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import miniLogo from '../img/whiteIcon.png'
-import { Link } from 'react-router-dom'
+import miniLogo from '../img/whiteIcon.png';
 
 const Footer = () => {
   return (
@@ -13,12 +12,8 @@ const Footer = () => {
         </div>
         <img src={miniLogo} className='miniLogo' alt='Something went wrong..'/>
         <div className='aboutUs'>
-          <Link to='/cart' className='link'>
-            <h3>Cart</h3>
-          </Link>
-          <Link to='/cart' className='link'>
+            <h3 >Cart</h3>
             <h3>Wishlist</h3>
-          </Link>
             <h3>About Us</h3>
         </div>
     </div>
