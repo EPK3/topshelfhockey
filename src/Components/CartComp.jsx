@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import './CartComp.css';
 import { useStateContext } from '../context/StateContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLock, faMinus, faPlus, faArrowAltCircleLeft, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faLock, faMinus, faPlus, faArrowLeft, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import toast from 'react-hot-toast';
 import { urlFor } from '../lib/client';
 
@@ -17,7 +17,7 @@ const Cart = () => {
     <div className='cartWrapper' ref={cartRef}>
       <div className='cartContainer'>
         <button type='button' onClick={()=> setShowCart(false)} className='cartButton'>
-          <FontAwesomeIcon icon={faArrowAltCircleLeft} className='arrowIcon'/>
+          <FontAwesomeIcon icon={faArrowLeft} className='arrowIcon'/>
           <span className='heading'>Your Cart ({totalQuantities})</span>
         </button>
         {cartItems.length < 1 &&(
