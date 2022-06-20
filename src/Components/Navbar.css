@@ -4,53 +4,36 @@
 }
 
 .navbar {
-    display: inline-flex;
+    display: flex;
     width: 100%;
-    height: auto;
-    align-items: center;
-    text-align: center;
     border-bottom: 1px solid #000000;
 }
 
+.navContainer {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
 .push {
-    margin-left: auto;
     display: inline-flex;
-}
-
-.searchBar {
-    justify-content: center;
-    flex: 2;
-    display: inline-flex;
-}
-
-.searchBox {
-    border: 1px solid #000000;
-    border-radius: 10px 0px 0px 10px;
-    height: 40px;
-    width: 400px;
-    background-color: #f1f1f1;
-    font-size: 16px;
-    padding-left: 20px;
-}
-
-.searchBox:focus {
-    outline: none;
-}
-
-.searchIcon {
-    padding: 10px;
-    background-color: #000000;
-    border: 1px solid #000000;
-    border-radius: 0px 10px 10px 0px;
-    color: #ffffff;
-    font-size: 18px;
-    transition: 0.2s ease-in;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
 
 .logo {
     height: 55px;
-    margin: 0px 20px;
-    justify-content: center;
+    margin: auto;
+    justify-content: flex-start;
 }
 
 .logo:hover {
@@ -58,7 +41,6 @@
 }
 
 .login {
-    margin: 20px 10px;
     padding: 10px 20px;
     background-color: #f2c301;
     border-radius: 25px;
@@ -67,8 +49,6 @@
 }
 
 .cart {
-    margin: 20px 10px;
-    margin-right: 40px;
     padding: 10px;
     color: #000000;
 }
@@ -94,13 +74,13 @@
 }
 
 h2 {
-    margin: 20px 40px;
+    margin: 20px;
     font-size: 18px;
 }
 
 .link {
     text-decoration: none;
-    margin: auto 0;
+    margin: auto;
 }
 
 @media only screen and (max-width: 1080px) {

@@ -1,29 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './Products.css';
 import ProductCard from './ProductCard';
-import { client } from '../lib/client';
+import { useStateContext } from '../context/StateContext';
 
 
 const Products = () => {
 
-  const [productData, setProductData] = useState(null);
+  const { filteredProducts } = useStateContext();
 
-  useEffect(()=>{
-    client.fetch(
-      `*[_type == "product"]{
-        image,
-        name,
-        slug,
-        sale_price,
-        og_price,
-      }`
-    )
-    .then((data) => setProductData(data))
-  }, []);
 
   return (
     <div className='productsContainer'>
-        {productData?.map((product) => <ProductCard key={product._id} product={product} />)}
+        {filteredProducts?.map((product) => <ProductCard key={product.slug.current} product={product} />)}
     </div>
   )
 };

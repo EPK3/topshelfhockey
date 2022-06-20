@@ -15,14 +15,17 @@ const Navbar = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext();
     return(
         <div className = "navbar">
-            <Link to='/topshelfhockey'><img className="logo" src={logo} alt='logo'/></Link>
-            <div className="searchBar">
+        <div className="navContainer">
+            <div className="logoContainer">
+                <Link to='/topshelfhockey'><img className="logo" src={logo} alt='logo'/></Link>
+            </div>
+            {/* <div className="searchBar">
                 <label for='productSearch'/>
                 <input type='search' id="productSearch" placeholder="Search..." className="searchBox"/>
                 <Link to='/products' className="link" aria-label="searchProducts">
                     <FontAwesomeIcon icon={faSearch} className='searchIcon'></FontAwesomeIcon>
                 </Link>
-            </div>
+            </div> */}
             <div className='push'>
                 <Link to='/login' className="link">
                 <h2 className="login"><FontAwesomeIcon icon={faUser} className='icon' /> Sign In</h2>
@@ -34,6 +37,7 @@ const Navbar = () => {
                     </span>
                 </h2>
             </div>
+        </div>
             {showCart && <CartComp/>}
         </div>
     );

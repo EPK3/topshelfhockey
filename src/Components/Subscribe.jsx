@@ -10,7 +10,7 @@ const Subscribe = () => {
             <h2>Get Our Latest Deals</h2>
         </div>
         <div className='subInput'>
-        <label for='subBox'/>
+        <label htmlFor='subBox'/>
         <input type='email' id='subBox' className="subBox"/>
         <h3>Subscribe</h3>
         </div>

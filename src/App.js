@@ -18,7 +18,7 @@ class App extends Component {
             <Toaster/>
             <Routes>
               <Route index path='/topshelfhockey' element={<Home/>} />
-              <Route path='/products/' element={<ProductList/>}/>
+              <Route path='/products/:category' element={<ProductList/>}/>
               <Route path='/product/:slug' element={<Product/>}/>
               <Route path='/register' element={<Register/>}/>
               <Route path='/login' element={<Login/>}/>

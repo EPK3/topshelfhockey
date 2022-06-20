@@ -1,18 +1,14 @@
-import React, { useState } from 'react'
-import { useLocation } from 'react-router'
+import React from 'react'
+import { useStateContext } from '../context/StateContext'
 import Select from 'react-select'
 import './ProductFilters.css'
 
 
 const ProductFilters = () => {
-  const location = useLocation();
-  const cat = location.pathname.split('/')[2];
-  const [filter, setFilters] = useState({});
-  const [sort, setSort] = useState({});
-  
+  const { handleFilters, handleSort} = useStateContext();
 
   const filterOptions = [
-    { value: 'all', label: 'All', name: "category"},
+    { value: '', label: 'All', name: "category"},
     { value: 'sticks', label: 'Sticks', name: "category" },
     { value: 'skates', label: 'Skates', name: "category" },
     { value: 'gear', label: 'Protective Gear', name: "category"}
@@ -23,18 +19,7 @@ const ProductFilters = () => {
     { value: 'priceLow', label: 'Price: Low to High', name: "sort" },
     { value: 'priceHigh', label: 'Price: High to Low', name: "sort" }
   ];
-  
-  const handleFilters = (option) => {
-    setFilters({
-      [option.name]: option.value,
-    });
-  };
 
-  const handleSort = (option) => {
-    setSort({
-      [option.name]: option.value,
-    });
-  };
 
   return (
     <div className='bannerContainer'>
@@ -47,7 +32,7 @@ const ProductFilters = () => {
                     <p>Filter:</p>
                     <Select onChange={ handleFilters } options={filterOptions} className='dropdown'/>
                 </div>
-                <div className='filter push'>
+                <div className='filter'>
                     <p>Sort:</p>
                     <Select onChange={ handleSort } options={sortOptions} className='dropdown'/>
                 </div>

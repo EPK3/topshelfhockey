@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { toast } from 'react-hot-toast';
+import { useLocation } from "react-router";
+import { client } from '../lib/client';
 
 const Context = createContext();
 
@@ -9,6 +11,45 @@ export const StateContext = ({ children }) => {
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalQuantities, setTotalQuantities] = useState(0);
     const [qty, setQty] = useState(1);
+    const location = useLocation();
+    const cat = location.pathname.split('/')[2];
+    const [filter, setFilter] = useState({});
+    const [sort, setSort] = useState({});
+    const [productData, setProductData] = useState(null);
+    const [filteredProducts, setFilteredProducts] = useState();
+
+    useEffect(()=>{
+      client.fetch(
+        `*[_type == "product"]{
+          image,
+          name,
+          slug,
+          sale_price,
+          og_price,
+          category,
+        }`
+      )
+      .then((data) => setProductData(data))
+    }, []);
+
+    useEffect(()=>{
+      if (cat) {
+        setFilteredProducts(
+          productData.filter((item) =>
+            Object.entries(filter).every(([key, value]) =>
+              item[key].includes(value)
+            )
+          )
+        );
+      } else {
+        setFilteredProducts(
+          productData
+        );
+      }
+        
+    }, [productData, cat, filter]);
+
+    console.log(filteredProducts);
 
     let foundProduct;
     let index;
@@ -78,16 +119,36 @@ export const StateContext = ({ children }) => {
         });
     }
 
+    const handleFilters = (option) => {
+      setFilter({
+        [option.name]: option.value,
+      });
+    };
+  
+  
+    const handleSort = (option) => {
+      setSort({
+        [option.name]: option.value,
+      });
+    };
+
 
     return (
         <Context.Provider
         value={{
+            productData,
             showCart,
             setShowCart,
             cartItems,
             totalPrice,
             totalQuantities,
             qty,
+            cat,
+            filteredProducts,
+            filter,
+            setFilter,
+            sort,
+            setSort,
             incQty,
             decQty,
             onAdd,
@@ -95,7 +156,9 @@ export const StateContext = ({ children }) => {
             setTotalPrice,
             setTotalQuantities,
             toggleCartItemQuantity,
-            onRemove
+            onRemove,
+            handleFilters,
+            handleSort,
         }}>
             {children}
         </Context.Provider>
